@@ -25,8 +25,6 @@ function ContactForm() {
   const [requestStatus, setRequestStatus] = useState(); // 'pending', 'success', 'error'
   const [errorMessage, setErrorMessage] = useState("");
 
-  console.log("revalidate deploy");
-
   useEffect(() => {
     if (requestStatus === "success" || requestStatus === "error") {
       const timer = setTimeout(() => {
