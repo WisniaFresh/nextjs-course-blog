@@ -1,5 +1,6 @@
 import { MongoClient } from "mongodb";
-import { mongoDbUrl } from "../../secretValues.json";
+
+const dbConnectionUrl = `mongodb+srv://${process.env.mongodb_username}:${process.env.mongodb_password}@${process.env.mongodb_clustername}.ghd08ke.mongodb.net/${process.env.mongodb_database}?retryWrites=true&w=majority`;
 
 async function handler(req, res) {
   if (req.method === "POST") {
@@ -27,7 +28,7 @@ async function handler(req, res) {
 
     let client;
     try {
-      client = await MongoClient.connect(mongoDbUrl);
+      client = await MongoClient.connect(dbConnectionUrl);
     } catch (err) {
       res
         .status(500)

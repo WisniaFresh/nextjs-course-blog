@@ -3,8 +3,15 @@ import remarkGfm from "remark-gfm";
 import PostHeader from "./post-header";
 import classes from "./post-content.module.css";
 import Image from "next/image";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
+import vscDarkPlus from "react-syntax-highlighter/dist/cjs/styles/prism/vsc-dark-plus";
+import jsLang from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
+import cssLang from "react-syntax-highlighter/dist/cjs/languages/prism/css";
+import jsxLang from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
+
+SyntaxHighlighter.registerLanguage("js", jsLang);
+SyntaxHighlighter.registerLanguage("css", cssLang);
+SyntaxHighlighter.registerLanguage("jsx", jsxLang);
 
 function PostContent({ post }) {
   const imagePath = `/images/posts/${post.slug}/${post.image}`;
