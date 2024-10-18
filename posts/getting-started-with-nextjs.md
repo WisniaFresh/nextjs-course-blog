@@ -114,3 +114,9 @@ Copy this Markdown syntax into your .md file and replace the example content wit
 [first alternative](https://codeium.com/pricing)
 
 [second alternative](https://www.tabnine.com/pricing/)
+
+[cline](https://github.com/cline/cline)
+
+[locofy - design to code](https://www.locofy.ai/)
+
+[builder io](https://www.builder.io/)
